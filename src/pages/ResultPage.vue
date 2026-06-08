@@ -24,6 +24,12 @@
             {{ result.animal.description }}
           </p>
         </div>
+
+        <div class="flex justify-center pt-2">
+          <button class="app-button-primary" type="button" @click="restart">
+            Начать заново
+          </button>
+        </div>
       </article>
     </main>
   </div>
@@ -31,16 +37,24 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import { useRouter } from 'vue-router';
 import AnimalPortrait from '@/components/AnimalPortrait.vue';
 import { loadResult } from '@/storage/resultStorage';
 import { useTestStore } from '@/stores/testStore';
 
 const store = useTestStore();
+const router = useRouter();
 store.hydrate();
 
 const result = computed(() => store.completedResult ?? loadResult());
 
 if (!result.value) {
   throw new Error('Result page rendered without a stored result.');
+}
+
+function restart() {
+  store.reset();
+  store.startFresh();
+  router.push({ name: 'test' });
 }
 </script>

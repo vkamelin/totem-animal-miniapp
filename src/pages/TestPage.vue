@@ -28,36 +28,6 @@
           </span>
         </div>
       </div>
-
-      <aside class="space-y-4 lg:sticky lg:top-6">
-        <section class="app-panel p-5">
-          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-app-secondary">Подсказка</p>
-          <p class="mt-3 text-sm leading-6 text-app-text">
-            Отвечай по первому естественному импульсу. Здесь нет правильных и неправильных
-            вариантов, есть только твой рабочий стиль.
-          </p>
-        </section>
-
-        <section class="app-panel p-5">
-          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-app-secondary">Статус</p>
-          <div class="mt-4 space-y-3">
-            <div class="rounded-2xl border border-app-border bg-white/75 px-4 py-3">
-              <p class="text-xs uppercase tracking-[0.18em] text-app-muted">Отвечено</p>
-              <p class="mt-1 text-lg font-semibold">{{ quiz.answeredCount }}/{{ quiz.totalQuestions }}</p>
-            </div>
-            <div class="rounded-2xl border border-app-border bg-white/75 px-4 py-3">
-              <p class="text-xs uppercase tracking-[0.18em] text-app-muted">Текущий индекс</p>
-              <p class="mt-1 text-lg font-semibold">{{ quiz.currentIndex + 1 }}</p>
-            </div>
-            <div class="rounded-2xl border border-app-border bg-white/75 px-4 py-3">
-              <p class="text-xs uppercase tracking-[0.18em] text-app-muted">Сохранение</p>
-              <p class="mt-1 text-sm leading-6 text-app-text">
-                После каждого ответа сессия обновляется автоматически.
-              </p>
-            </div>
-          </div>
-        </section>
-      </aside>
     </div>
   </AppLayout>
 </template>
