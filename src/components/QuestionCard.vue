@@ -16,7 +16,7 @@
     <div class="grid gap-3 sm:grid-cols-2">
       <AnswerButton
         v-for="answer in question.answers"
-        :key="answer.code"
+        :key="`${question.code}-${answer.code}`"
         :text="answer.text"
         :code-label="answer.code.toUpperCase()"
         :is-selected="selectedAnswerCode === answer.code"
