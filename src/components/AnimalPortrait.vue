@@ -9,6 +9,15 @@
     <div class="absolute right-6 top-8 h-24 w-24 rounded-full bg-white/12 blur-2xl" />
     <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-[radial-gradient(circle_at_bottom,rgba(255,255,255,0.08),transparent_64%)]" />
 
+    <img
+      v-if="imagePath"
+      :src="imagePath"
+      :alt="animalName"
+      class="absolute inset-x-0 bottom-0 mx-auto h-[100%] w-[100%] object-contain drop-shadow-[0_18px_18px_rgba(0,0,0,0.14)]"
+      loading="eager"
+      decoding="async"
+    />
+
     <div v-if="!minimal" class="relative flex w-full flex-col gap-4 p-5 text-app-inverse">
       <div class="flex items-center justify-between">
         <span class="rounded-full border border-white/20 bg-white/12 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em]">
@@ -32,15 +41,6 @@
         </div>
       </div>
     </div>
-
-    <div v-else class="relative flex h-full w-full items-end justify-center p-6">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.24),transparent_44%)]" />
-      <div class="absolute bottom-6 left-1/2 h-44 w-44 -translate-x-1/2 rounded-full border border-white/18 bg-white/10 blur-[0.2px]" />
-      <div class="absolute bottom-10 left-1/2 h-28 w-28 -translate-x-1/2 rounded-full bg-white/14" />
-      <div class="absolute bottom-16 left-[50%] h-16 w-16 -translate-x-[38%] rounded-full bg-white/18" />
-      <div class="absolute bottom-16 left-[50%] h-16 w-16 -translate-x-1/2 rounded-full bg-white/18" />
-      <div class="absolute bottom-6 left-1/2 h-5 w-36 -translate-x-1/2 rounded-full bg-black/10 blur-sm" />
-    </div>
   </div>
 </template>
 
@@ -51,6 +51,7 @@ const props = defineProps<{
   animalCode: string;
   animalName: string;
   animalTitle: string;
+  imagePath?: string;
   minimal?: boolean;
 }>();
 

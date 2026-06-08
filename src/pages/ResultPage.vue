@@ -12,6 +12,7 @@
           :animal-code="result.animal.code"
           :animal-name="result.animal.name"
           :animal-title="result.animal.title"
+          :image-path="result.animal.imagePath"
           minimal
           class="mx-auto max-w-[420px]"
         />

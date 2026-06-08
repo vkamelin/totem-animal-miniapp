@@ -6,6 +6,7 @@
           :animal-code="animal.code"
           :animal-name="animal.name"
           :animal-title="animal.title"
+          :image-path="animal.imagePath"
         />
 
         <div class="flex flex-col justify-between gap-5">
