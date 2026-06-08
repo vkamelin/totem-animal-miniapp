@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+  }
+
+  body {
+    @apply bg-app-bg text-app-text antialiased;
+    margin: 0;
+    font-family:
+      'Trebuchet MS',
+      'Segoe UI',
+      'Avenir Next',
+      system-ui,
+      sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: rgba(217, 107, 50, 0.22);
+  }
+}
+
+@layer components {
+  .app-card {
+    @apply rounded-[28px] border border-app-border/80 bg-app-surface shadow-soft backdrop-blur;
+    background-color: rgba(255, 249, 238, 0.92);
+  }
+
+  .app-panel {
+    @apply rounded-[24px] border border-app-border/70 bg-white/60 shadow-[0_12px_32px_rgba(70,47,28,0.08)] backdrop-blur;
+  }
+
+  .app-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-app-primary focus-visible:ring-offset-2 focus-visible:ring-offset-app-bg;
+  }
+
+  .app-button-primary {
+    @apply app-button bg-app-primary text-app-inverse shadow-[0_12px_24px_rgba(217,107,50,0.26)] hover:bg-app-primaryHover active:translate-y-[1px];
+  }
+
+  .app-button-secondary {
+    @apply app-button border border-app-border bg-white/70 text-app-text hover:border-app-secondarySoft hover:bg-white;
+  }
+
+  .app-button-ghost {
+    @apply app-button text-app-muted hover:bg-black/5;
+  }
+
+  .soft-scrollbar {
+    scrollbar-color: rgba(122, 109, 94, 0.4) transparent;
+  }
+}
