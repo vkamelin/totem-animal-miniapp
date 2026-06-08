@@ -18,10 +18,10 @@
         />
 
         <div class="mx-auto max-w-2xl space-y-4 text-center">
-          <h1 class="text-3xl font-semibold tracking-tight text-app-text sm:text-5xl">
+          <h1 class="text-3xl font-semibold tracking-tight text-app-text sm:text-3xl">
             Твое тотемное животное - {{ result.animal.name }}
           </h1>
-          <p class="text-base leading-7 text-app-muted sm:text-lg">
+          <p class="text-base leading-7 text-app-muted">
             {{ result.animal.description }}
           </p>
         </div>
