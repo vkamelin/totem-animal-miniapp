@@ -3,7 +3,7 @@
     <div class="mb-5 flex flex-wrap items-start justify-between gap-4">
       <div class="space-y-2">
         <p class="text-sm font-semibold uppercase tracking-[0.16em] text-app-secondary">Вопрос</p>
-        <h1 class="max-w-3xl text-2xl font-semibold leading-tight tracking-tight text-app-text sm:text-3xl">
+        <h1 class="max-w-3xl text-2xl font-semibold leading-tight tracking-tight text-app-text sm:text-2xl">
           {{ question.question }}
         </h1>
       </div>
