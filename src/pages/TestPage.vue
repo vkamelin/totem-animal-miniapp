@@ -1,6 +1,6 @@
 <template>
   <AppLayout>
-    <div class="grid gap-6 lg:grid-cols-[minmax(0,1.08fr)_320px] lg:items-start">
+    <div>
       <div class="space-y-5">
         <ProgressBar
           :current="quizProgress"

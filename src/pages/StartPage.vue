@@ -1,6 +1,6 @@
 <template>
   <AppLayout>
-    <div class="grid gap-6 lg:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.92fr)] lg:items-start">
+    <div class="">
       <section class="app-card overflow-hidden p-6 sm:p-8">
         <div class="max-w-2xl space-y-6">
           <div class="space-y-4">
