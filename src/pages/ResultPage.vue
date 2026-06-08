@@ -7,17 +7,17 @@
     </div>
 
     <main class="relative mx-auto flex min-h-screen w-full max-w-4xl items-center px-4 py-8 sm:px-6 lg:px-8">
-      <article class="grid w-full gap-6 sm:gap-8">
+      <article class="grid w-full gap-6 sm:gap-4">
         <AnimalPortrait
           :animal-code="result.animal.code"
           :animal-name="result.animal.name"
           :animal-title="result.animal.title"
           :image-path="result.animal.imagePath"
           minimal
-          class="mx-auto max-w-[420px]"
+          class="mx-auto max-w-[360px]"
         />
 
-        <div class="mx-auto max-w-2xl space-y-4 text-center">
+        <div class="mx-auto max-w-2xl space-y-2 text-center">
           <h1 class="text-3xl font-semibold tracking-tight text-app-text sm:text-3xl">
             Твое тотемное животное - {{ result.animal.name }}
           </h1>
@@ -26,7 +26,7 @@
           </p>
         </div>
 
-        <div class="flex justify-center pt-2">
+        <div class="flex justify-center">
           <button class="app-button-primary" type="button" @click="restart">
             Начать заново
           </button>
